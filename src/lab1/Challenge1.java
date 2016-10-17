@@ -22,16 +22,21 @@ public class Challenge1 {
         Challenge1 app = new Challenge1();
         
         
-        private String fullName = JOptionPane.showInputDialog("Enter full name (use Format: first last):");
-        private String lastName = "unknown";
+        String fullName = JOptionPane.showInputDialog("Enter full name (use Format: first last):");
+        String lastName = "unknown";
         
         try {
             lastName = app.extractLastName(fullName);
         } catch(IllegalArgumentException e) {
             JOptionPane.showMessageDialog(null, e.getMessage);
-            String msg = "Your last name is: " + lastName;
+            
         }
         
+        String msg = "Your last name is: " + lastName;
+            JOptionPane.showMessageDialog(null,msg);
+    }
+        
+            
          // write the code to extract the lastName from the fullName
     // Use exception handling to prevent a crash in the event that fullName
     // is null or empty. Throw the exception to the calling method. and handle
@@ -51,5 +56,5 @@ public class Challenge1 {
         }
     }
         
-    
 }
+
